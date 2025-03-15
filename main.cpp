@@ -8,5 +8,6 @@ int main(int argc, char* argv[]){
 
     cout << tensor << endl;
     cout << "Torch is included properly" << endl;
+
     return 0;
 }

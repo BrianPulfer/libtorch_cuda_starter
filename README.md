@@ -13,3 +13,4 @@ This is a starter project for using LibTorch with C++ and CUDA in VSCode for Lin
 
 ## Usage:
 In VSCode, Simply set a breakpoint and hit `F5` to build and debug the project.
+

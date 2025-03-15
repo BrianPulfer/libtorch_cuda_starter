@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Build", // Must match the preLaunchTask name in launch.json
+            "type": "shell",
+            "command": "cmake --build ${workspaceFolder}/build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"], // Optional: Helps VSCode parse build errors
+            "detail": "Task to build the CMake project",
+            "dependsOn": ["Create build directory"] // Optional: Run this task after another task
+        },
+        {
+            "label": "Create build directory",
+            "type": "shell",
+            "command": "cmake -DCMAKE_PREFIX_PATH=${workspaceFolder}/libtorch -B ${workspaceFolder}/build -S ${workspaceFolder} -DCMAKE_BUILD_TYPE=Debug",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Task to create the build directory"
+        }
+    ]
+}
